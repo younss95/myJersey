@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football & Sélections</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+
+
+
+<!--  search section starts here-->
+<section class="search2 text-center">
+    <div class="container">
+        <h1>"Le football : un sport qui rassemble les continents"</h1><br><br>
+    </div>
+</section>
+
+ <!--  search section ends here-->
+
+
+
+
+ <!--  selection section starts here-->
+<section class="selections">
+    <div class="container2">
+        <img src="images/europe.jpg" alt="europe" class="img-responsive">
+        <div class="bg-text">
+            <div class="btn-container">
+                <form action="" method="post">
+                    <input type="submit" name="selections" value="EUROPE" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  selection section starts here-->
+
+
+ <!--  selection section starts here-->
+<section class="selections">
+    <div class="container2 ameriquesud">
+        <img src="images/ameriquesud.jpg" alt="amerique du sud" class="img-responsive img-adjust">
+        <div class="bg-text">
+            <div class="btn-container">
+                <form action="" method="post">
+                    <input type="submit" name="selections" value="AMERIQUE DU SUD" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  selection section starts here-->
+
+
+
+<!--  selection section starts here-->
+<section class="selections">
+    <div class="container2">
+        <img src="images/america (2).jpg" alt="amerique" class="img-responsive">
+        <div class="bg-text">
+            <div class="btn-container">
+                <form action="" method="post">
+                    <input type="submit" name="selections" value="AMERIQUE DU NORD" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  selection section starts here-->
+
+
+
+
+
+<!--  selection section starts here-->
+<section class="selections">
+    <div class="container2">
+        <img src="images/asia.JPG" alt="asie" class="img-responsive">
+        <div class="bg-text">
+            <div class="btn-container">
+                <form action="" method="post">
+                    <input type="submit" name="selections" value="ASIE" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  selection section starts here-->
+
+
+
+
+<!--  selection section starts here-->
+<section class="selections">
+    <div class="container2">
+        <img src="images/afrique.jpg" alt="africa" class="img-responsive">
+        <div class="bg-text">
+            <div class="btn-container">
+                <form action="" method="post">
+                    <input type="submit" name="selections" value="AFRIQUE" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  selection section starts here-->
+
+
+
+
+
+
+
+
+
+<!--  reseaux section starts here-->
+<section class="search2bis text-center">
+    <div class="container">
+        <h1>Rejoignez nous sur nos réseaux sociaux ! </h1><br><br>
+    </div>
+</section>
+
+ <!--  reseaux section ends here-->
+
+ 
+
+ <script>
+    // Charger navbar et footer
+    function loadComponent(filePath, elementId) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => console.error('Erreur lors du chargement du composant:', error));
+    }
+
+    // Appels pour charger la navbar et le footer
+    loadComponent('partiels/navbar.html', 'navbar');
+    loadComponent('partiels/footer.html', 'footer');
+
+    // Fonction de navigation
+    function navigateTo(region) {
+        alert("Navigation vers la région : " + region); // Rediriger vers une autre page si nécessaire
+    }
+</script>
+</body>
+</html>

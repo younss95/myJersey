@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs et Sélections</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Section de recherche -->
+    <section class="search2 text-center">
+        <div class="container">
+            <h1>Découvrez les clubs et sélections disponibles</h1><br><br>
+            <form>
+                <input type="search" placeholder="Recherche..." name="search">
+                <input type="submit" value="valider" class="btn btn-primary">
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Clubs -->
+    <section class="club">
+        <div class="container2">
+            <img src="images/ars.jpg" alt="arsenal" class="img-responsive">
+            <div class="bg-text">
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="navigateTo('clubs')">CLUBS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Sélections -->
+    <section class="selection">
+        <div class="container2">
+            <img src="images/algerie.png" alt="algerie" class="img-responsive">
+            <div class="bg-text">
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="navigateTo('selections')">SELECTIONS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réseaux sociaux -->
+    <section class="search2bis text-center">
+        <div class="container">
+            <h1>Rejoignez-nous sur nos réseaux sociaux !</h1><br><br>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Fonction pour charger les composants
+        function loadComponent(filePath, elementId) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Erreur lors du chargement du composant:', error));
+        }
+
+        // Charger navbar et footer
+        loadComponent('partiels/navbar.html', 'navbar');
+        loadComponent('partiels/footer.html', 'footer');
+
+        // Fonction de navigation
+        function navigateTo(page) {
+            if (page === 'clubs') {
+                window.location.href = 'clubs.html';
+            } else if (page === 'selections') {
+                window.location.href = 'selections.html';
+            }
+        }
+    </script>
+</body>
+</html>
